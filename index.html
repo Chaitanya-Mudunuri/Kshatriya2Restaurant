@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kshatriya Restaurant 2 | The Legendary Biryani Experience</title>
+    <meta name="description"
+        content="Kshatriya Restaurant 2 — Home of the legendary Rajula Chitti Muthyala Biryani in Dharmavaram. Experience authentic South Indian flavors.">
+    <!-- Premium Typography -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <i class="fas fa-crown loader-crown"></i>
+                <div class="loader-text-row">
+                    <span class="loader-k">K</span>
+                    <span class="loader-rest">SHATRIYA</span>
+                    <span class="loader-num">2</span>
+                </div>
+            </div>
+            <div class="loader-bar-track">
+                <div class="loader-bar-fill" id="loader-fill"></div>
+            </div>
+            <p class="loader-tagline">Preparing a royal experience...</p>
+        </div>
+    </div>
+
+    <!-- Floating Spice Particles -->
+    <canvas id="spice-particles"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo royal-logo" aria-label="Kshatriya Restaurant 2 Home">
+                <div class="logo-emblem">
+                    <div class="crown-halo"></div>
+                    <i class="fas fa-crown logo-crown"></i>
+                </div>
+                <div class="logo-content">
+                    <div class="logo-title-row">
+                        <span class="logo-name">KSHATRIYA</span>
+                        <span class="logo-tag-num">2</span>
+                    </div>
+                    <span class="logo-subtitle">ROYAL HERITAGE · NH 16</span>
+                </div>
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="#home" class="nav-link" data-text="Home">Home</a>
+                <a href="#story" class="nav-link" data-text="Our Story">Our Story</a>
+                <a href="#menu" class="nav-link" data-text="Menu">Menu</a>
+                <a href="#gallery" class="nav-link" data-text="Gallery">Gallery</a>
+                <a href="#reviews" class="nav-link" data-text="Reviews">Reviews</a>
+                <a href="#contact" class="nav-link" data-text="Contact">Contact</a>
+                <a href="#location" class="nav-cta magnetic">
+                    <span>Reserve</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-content">
+            <a href="#home" class="mobile-link">Home</a>
+            <a href="#story" class="mobile-link">Our Story</a>
+            <a href="#menu" class="mobile-link">Menu</a>
+            <a href="#gallery" class="mobile-link">Gallery</a>
+            <a href="#reviews" class="mobile-link">Reviews</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+            <a href="#location" class="mobile-link-cta">Get Directions</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-bg">
+                <img src="real_biryani.jpg" alt="Kshatriya Restaurant Biryani" id="hero-img">
+                <div class="hero-gradient"></div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-badge anim-reveal">
+                    <span class="badge-dot"></span>
+                    Now Open in Dharmavaram
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line anim-reveal-line">
+                        <span class="title-word">THE</span>
+                        <span class="title-word">LEGEND</span>
+                    </span>
+                    <span class="title-line anim-reveal-line">
+                        <span class="title-word accent">LIVES</span>
+                        <span class="title-word accent">HERE.</span>
+                    </span>
+                </h1>
+                <p class="hero-sub anim-reveal">Home of the legendary Rajula Chitti Muthyala Biryani.<br>Crafted with
+                    tradition. Served with pride.</p>
+                <div class="hero-actions anim-reveal">
+                    <a href="#menu" class="btn-primary magnetic">
+                        <span>Explore Menu</span>
+                        <div class="btn-shimmer"></div>
+                    </a>
+                    <a href="#story" class="btn-ghost">
+                        <span>Our Story</span>
+                        <i class="fas fa-play"></i>
+                    </a>
+                </div>
+                <div class="scroll-indicator anim-reveal">
+                    <div class="scroll-line"></div>
+                    <span>Scroll to explore</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marquee Ribbon -->
+        <section class="marquee-ribbon">
+            <div class="marquee-track">
+                <div class="marquee-content">
+                    <span>AUTHENTIC RAJULA DUM PULAV</span>
+                    <span class="marquee-star">✦</span>
+                    <span>UNMATCHED FLAVOR</span>
+                    <span class="marquee-star">✦</span>
+                    <span>KSHATRIYA RESTAURANT 2</span>
+                    <span class="marquee-star">✦</span>
+                    <span>CHITTI MUTHYALA BIRYANI</span>
+                    <span class="marquee-star">✦</span>
+                    <span>AUTHENTIC RAJULA DUM PULAV</span>
+                    <span class="marquee-star">✦</span>
+                    <span>UNMATCHED FLAVOR</span>
+                    <span class="marquee-star">✦</span>
+                    <span>KSHATRIYA RESTAURANT 2</span>
+                    <span class="marquee-star">✦</span>
+                    <span>CHITTI MUTHYALA BIRYANI</span>
+                    <span class="marquee-star">✦</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Story Section -->
+        <section class="story-section" id="story">
+            <div class="container">
+                <div class="story-grid">
+                    <div class="story-visual">
+                        <div class="story-img-wrapper anim-scale">
+                            <img src="real_biryani.jpg" alt="Signature Biryani">
+                            <div class="story-badge-float">
+                                <span class="badge-number">100%</span>
+                                <span class="badge-label">Authentic</span>
+                            </div>
+                        </div>
+                        <div class="story-accent-line"></div>
+                    </div>
+                    <div class="story-text">
+                        <span class="section-label anim-reveal">— OUR LEGACY</span>
+                        <h2 class="section-heading anim-reveal">
+                            Taste<br>
+                            <em>The Difference.</em>
+                        </h2>
+                        <p class="story-paragraph anim-reveal">
+                            Don't settle for ordinary. Kshatriya Restaurant 2 brings you the authentic
+                            <strong>Rajula Style Chitti Muthyala Biryani</strong> — short-grain rice perfectly
+                            spiced, massive tender mutton chunks, and a boiled egg. Every grain tells a story
+                            of tradition passed down through generations.
+                        </p>
+                        <div class="story-stats anim-reveal">
+                            <div class="stat">
+                                <span class="stat-number" data-count="7">0</span><span class="stat-suffix">+</span>
+                                <span class="stat-label">Years of Legacy</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" data-count="20">0</span><span class="stat-suffix">K+</span>
+                                <span class="stat-label">Happy Customers</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" data-count="10">0</span><span class="stat-suffix">+</span>
+                                <span class="stat-label">Signature Dishes</span>
+                            </div>
+                        </div>
+                        <a href="#menu" class="btn-outline anim-reveal magnetic">
+                            <span>See Full Menu</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section class="menu-section" id="menu">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label anim-reveal">— CURATED SELECTION</span>
+                    <h2 class="section-heading-center anim-reveal">Our <em>Signature</em> Menu</h2>
+                    <p class="section-sub anim-reveal">Each dish is a masterpiece, prepared with the finest ingredients
+                        and timeless techniques.</p>
+                </div>
+
+                <!-- Menu Filter Tabs -->
+                <div class="menu-tabs anim-reveal">
+                    <button class="tab active" data-filter="all">All</button>
+                    <button class="tab" data-filter="biryani">Biryanis</button>
+                    <button class="tab" data-filter="starter">Starters</button>
+                    <button class="tab" data-filter="dessert">Desserts</button>
+                </div>
+
+                <div class="menu-grid">
+                    <!-- Chicken Biryani -->
+                    <div class="menu-card anim-reveal" data-category="biryani">
+                        <div class="card-image">
+                            <img src="real_biryani.jpg" alt="Chicken Chitti Muthyala Biryani">
+                            <div class="card-overlay">
+                                <span class="card-tag">Bestseller</span>
+                            </div>
+                            <div class="card-glow"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3>Chicken Chitti Muthyala Biryani</h3>
+                            <p>Our pride. Authentic Rajula style pulav cooked perfectly with tender chicken.</p>
+                            <div class="card-footer">
+                                <div class="card-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="card-label">Signature</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dupudu Biryani -->
+                    <div class="menu-card anim-reveal" data-category="biryani">
+                        <div class="card-image">
+                            <img src="biryani_brown.jpg" alt="Dupudu Chitti Muthyala Biryani">
+                            <div class="card-overlay">
+                                <span class="card-tag">Chef's Pick</span>
+                            </div>
+                            <div class="card-glow"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3>Dupudu Chitti Muthyala Biryani</h3>
+                            <p>Dark, rich, and intensely flavorful traditional mutton pulav-style biryani.</p>
+                            <div class="card-footer">
+                                <div class="card-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="card-label">Premium</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Natukodi Biryani -->
+                    <div class="menu-card anim-reveal" data-category="biryani">
+                        <div class="card-image">
+                            <img src="natukodi_biryani.jpg" alt="Natukodi Chitti Muthyala Biryani">
+                            <div class="card-overlay">
+                                <span class="card-tag">Spicy</span>
+                            </div>
+                            <div class="card-glow"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3>Natukodi Chitti Muthyala Biryani</h3>
+                            <p>Spicy country chicken cooked with our signature short-grain aromatic rice.</p>
+                            <div class="card-footer">
+                                <div class="card-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="card-label">Country Style</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grill Chicken -->
+                    <div class="menu-card anim-reveal" data-category="starter">
+                        <div class="card-image">
+                            <img src="grill_chicken.jpg" alt="Grill Chicken">
+                            <div class="card-overlay">
+                                <span class="card-tag">Popular</span>
+                            </div>
+                            <div class="card-glow"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3>Grill Chicken</h3>
+                            <p>Juicy, smoky, and perfectly charred over an open flame with house spices.</p>
+                            <div class="card-footer">
+                                <div class="card-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="card-label">Grilled</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chilli Chicken -->
+                    <div class="menu-card anim-reveal" data-category="starter">
+                        <div class="card-image">
+                            <img src="chilli_chicken.jpg" alt="Chilli Chicken">
+                            <div class="card-overlay">
+                                <span class="card-tag">Spicy</span>
+                            </div>
+                            <div class="card-glow"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3>Chilli Chicken</h3>
+                            <p>Classic Indo-Chinese appetizer, tossed with fresh green chillies and soy sauce.</p>
+                            <div class="card-footer">
+                                <div class="card-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="card-label">Indo-Chinese</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Manchuria -->
+                    <div class="menu-card anim-reveal" data-category="starter">
+                        <div class="card-image">
+                            <img src="manchuria.jpg" alt="Manchuria">
+                            <div class="card-overlay">
+                                <span class="card-tag">Veg & Non-Veg</span>
+                            </div>
+                            <div class="card-glow"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3>Manchuria</h3>
+                            <p>Tangy and spicy. <strong>All Veg & Non-Veg options available.</strong></p>
+                            <div class="card-footer">
+                                <div class="card-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="card-label">Indo-Chinese</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Junnu -->
+                    <div class="menu-card anim-reveal" data-category="dessert">
+                        <div class="card-image">
+                            <img src="junnu_dessert.jpg" alt="Junnu Dessert">
+                            <div class="card-overlay">
+                                <span class="card-tag">Traditional</span>
+                            </div>
+                            <div class="card-glow"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3>Junnu</h3>
+                            <p>Traditional, melt-in-your-mouth South Indian milk pudding flavoured with cardamom.</p>
+                            <div class="card-footer">
+                                <div class="card-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="card-label">Dessert</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery Section -->
+        <section class="gallery-section" id="gallery">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label anim-reveal">— FROM OUR GOOGLE MAPS</span>
+                    <h2 class="section-heading-center anim-reveal">Photo <em>Gallery</em></h2>
+                    <p class="section-sub anim-reveal">Captured moments from our customers and kitchen — straight from
+                        Google Maps.</p>
+                </div>
+                <div class="gallery-grid anim-reveal">
+                    <div class="gallery-item gallery-wide"
+                        data-caption="Kshatriya Dum Biryani 2 — Main Road, NH 16 Dharmavaram">
+                        <div class="gallery-source-tag"><i class="fab fa-google"></i> Business Profile</div>
+                        <img src="restaurant_front.jpg" alt="Kshatriya Restaurant 2 Front Profile" loading="lazy">
+                        <div class="gallery-hover">
+                            <i class="fas fa-expand"></i>
+                            <span>Storefront & Landmark</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-caption="Traditional Handi Dum Cooking in Kitchen">
+                        <div class="gallery-source-tag"><i class="fab fa-google"></i> Maps Photo</div>
+                        <img src="kitchen_pot.jpg" alt="Dum Cooking Pot" loading="lazy">
+                        <div class="gallery-hover">
+                            <i class="fas fa-expand"></i>
+                            <span>Kitchen Dum Preparation</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-caption="Signature Chitti Muthyala Biryani">
+                        <div class="gallery-source-tag"><i class="fab fa-google"></i> Maps Photo</div>
+                        <img src="real_biryani.jpg" alt="Signature Biryani" loading="lazy">
+                        <div class="gallery-hover">
+                            <i class="fas fa-expand"></i>
+                            <span>Signature Biryani</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item gallery-wide" data-caption="AC Dining Hall & Family Seating">
+                        <div class="gallery-source-tag"><i class="fab fa-google"></i> Business Profile</div>
+                        <img src="dining_hall.jpg" alt="Dining Hall Ambiance" loading="lazy">
+                        <div class="gallery-hover">
+                            <i class="fas fa-expand"></i>
+                            <span>Dining Hall & Seating</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-caption="Official Listing & Interior Showcase">
+                        <div class="gallery-source-tag"><i class="fab fa-google"></i> Business Catalogue</div>
+                        <img src="restaurant_catalogue.jpg" alt="Restaurant Catalogue Photo" loading="lazy">
+                        <div class="gallery-hover">
+                            <i class="fas fa-expand"></i>
+                            <span>Interior & Dining</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-caption="Dupudu Mutton Biryani">
+                        <div class="gallery-source-tag"><i class="fab fa-google"></i> Maps Photo</div>
+                        <img src="biryani_brown.jpg" alt="Dupudu Biryani" loading="lazy">
+                        <div class="gallery-hover">
+                            <i class="fas fa-expand"></i>
+                            <span>Dupudu Biryani</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-caption="Natukodi Country Chicken Biryani">
+                        <div class="gallery-source-tag"><i class="fab fa-google"></i> Maps Photo</div>
+                        <img src="natukodi_biryani.jpg" alt="Natukodi Biryani" loading="lazy">
+                        <div class="gallery-hover">
+                            <i class="fas fa-expand"></i>
+                            <span>Natukodi Biryani</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-caption="Grill Chicken Tandoori">
+                        <div class="gallery-source-tag"><i class="fab fa-google"></i> Maps Photo</div>
+                        <img src="grill_chicken.jpg" alt="Grill Chicken" loading="lazy">
+                        <div class="gallery-hover">
+                            <i class="fas fa-expand"></i>
+                            <span>Grill Chicken</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-caption="Crispy Andhra Chilli Chicken">
+                        <div class="gallery-source-tag"><i class="fab fa-google"></i> Maps Photo</div>
+                        <img src="chilli_chicken.jpg" alt="Chilli Chicken" loading="lazy">
+                        <div class="gallery-hover">
+                            <i class="fas fa-expand"></i>
+                            <span>Chilli Chicken</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-caption="Chicken Manchuria Starter">
+                        <div class="gallery-source-tag"><i class="fab fa-google"></i> Maps Photo</div>
+                        <img src="manchuria.jpg" alt="Chicken Manchuria" loading="lazy">
+                        <div class="gallery-hover">
+                            <i class="fas fa-expand"></i>
+                            <span>Chicken Manchuria</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-caption="Junnu Traditional Godavari Dessert">
+                        <div class="gallery-source-tag"><i class="fab fa-google"></i> Maps Photo</div>
+                        <img src="junnu_dessert.jpg" alt="Junnu" loading="lazy">
+                        <div class="gallery-hover">
+                            <i class="fas fa-expand"></i>
+                            <span>Junnu Dessert</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox Modal -->
+        <div class="lightbox" id="lightbox">
+            <button class="lightbox-close" id="lightbox-close">&times;</button>
+            <button class="lightbox-prev" id="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="lightbox-next" id="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="" alt="">
+                <p class="lightbox-caption" id="lightbox-caption"></p>
+            </div>
+        </div>
+
+        <!-- Google Reviews Section -->
+        <section class="reviews-section" id="reviews">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label anim-reveal">— WHAT OUR PATRONS SAY</span>
+                    <h2 class="section-heading-center anim-reveal">Google <em>Reviews</em></h2>
+                    <p class="section-sub anim-reveal">Real customer stories & ratings from our Google Maps profile on
+                        NH 16, Dharmavaram.</p>
+                </div>
+
+                <!-- Master Aligned Overall Rating Plaque -->
+                <div class="overall-rating-card glass-card anim-reveal">
+                    <div class="overall-card-header">
+                        <div class="google-badge-pill">
+                            <i class="fab fa-google"></i>
+                            <span>Google Maps Verified Profile</span>
+                        </div>
+                        <span class="profile-location-text">
+                            <i class="fas fa-map-marker-alt"></i> Kshatriya Restaurant 2 · NH 16, Dharmavaram
+                        </span>
+                    </div>
+
+                    <div class="overall-card-body">
+                        <!-- Left Scorecard Column -->
+                        <div class="overall-score-col">
+                            <div class="score-display">
+                                <span class="rating-big" id="overall-rating">4.0</span>
+                                <div class="rating-stars-big" aria-label="4 out of 5 stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <span class="review-count">Based on <strong id="review-count">150+</strong> genuine
+                                ratings</span>
+                            <a href="https://maps.app.goo.gl/hr7RNnLmntbYCXi8A" target="_blank"
+                                rel="noopener noreferrer" class="btn-outline write-review-btn magnetic">
+                                <i class="fab fa-google"></i>
+                                <span>Write a Review</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+
+                        <!-- Vertical Divider -->
+                        <div class="overall-card-divider"></div>
+
+                        <!-- Right Star Distribution Breakdown Column -->
+                        <div class="overall-bars-col">
+                            <div class="rating-bar-row" data-bar-filter="5" title="Filter 5 Star Reviews">
+                                <span class="bar-star-num">5</span>
+                                <div class="bar-track">
+                                    <div class="bar-fill" style="width: 58%;"></div>
+                                </div>
+                                <span class="bar-count-label">58% <em>(87)</em></span>
+                            </div>
+                            <div class="rating-bar-row" data-bar-filter="4" title="Filter 4 Star Reviews">
+                                <span class="bar-star-num">4</span>
+                                <div class="bar-track">
+                                    <div class="bar-fill" style="width: 22%;"></div>
+                                </div>
+                                <span class="bar-count-label">22% <em>(33)</em></span>
+                            </div>
+                            <div class="rating-bar-row" data-bar-filter="3" title="Filter 3 Star Reviews">
+                                <span class="bar-star-num">3</span>
+                                <div class="bar-track">
+                                    <div class="bar-fill" style="width: 12%;"></div>
+                                </div>
+                                <span class="bar-count-label">12% <em>(18)</em></span>
+                            </div>
+                            <div class="rating-bar-row" data-bar-filter="2" title="Filter 2 Star Reviews">
+                                <span class="bar-star-num">2</span>
+                                <div class="bar-track">
+                                    <div class="bar-fill" style="width: 5%;"></div>
+                                </div>
+                                <span class="bar-count-label">5% <em>(8)</em></span>
+                            </div>
+                            <div class="rating-bar-row" data-bar-filter="1" title="Filter 1 Star Reviews">
+                                <span class="bar-star-num">1</span>
+                                <div class="bar-track">
+                                    <div class="bar-fill" style="width: 3%;"></div>
+                                </div>
+                                <span class="bar-count-label">3% <em>(4)</em></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Star Filter Bar -->
+                <div class="reviews-filter-bar anim-reveal">
+                    <button class="review-filter-btn active" data-filter="all"><i class="fas fa-certificate"></i> All
+                        Reviews <span class="filter-count">(18)</span></button>
+                    <button class="review-filter-btn" data-filter="5"><i class="fas fa-star"></i> 5 Stars <span
+                            class="filter-count">(7)</span></button>
+                    <button class="review-filter-btn" data-filter="4"><i class="fas fa-star"></i> 4 Stars <span
+                            class="filter-count">(4)</span></button>
+                    <button class="review-filter-btn" data-filter="3"><i class="fas fa-star"></i> 3 Stars <span
+                            class="filter-count">(3)</span></button>
+                    <button class="review-filter-btn" data-filter="2"><i class="fas fa-star"></i> 2 Stars <span
+                            class="filter-count">(2)</span></button>
+                    <button class="review-filter-btn" data-filter="1"><i class="fas fa-star"></i> 1 Star <span
+                            class="filter-count">(2)</span></button>
+                </div>
+
+                <!-- Reviews Carousel Showcase (Full Width Aligned) -->
+                <div class="reviews-carousel anim-reveal">
+                    <div class="reviews-track" id="reviews-track">
+                        <!-- Reviews inserted dynamically by JS -->
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn" id="reviews-prev" aria-label="Previous review"><i
+                                class="fas fa-arrow-left"></i></button>
+                        <div class="carousel-dots" id="carousel-dots"></div>
+                        <button class="carousel-btn" id="reviews-next" aria-label="Next review"><i
+                                class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Parallax Divider -->
+        <section class="parallax-divider">
+            <div class="parallax-bg">
+                <img src="real_biryani.jpg" alt="Biryani Close-up" id="parallax-img">
+            </div>
+            <div class="parallax-content">
+                <h2 class="parallax-text anim-reveal">
+                    <span class="parallax-line">"Every grain of rice</span>
+                    <span class="parallax-line accent">tells a story."</span>
+                </h2>
+            </div>
+        </section>
+
+        <!-- CTA / Location Section -->
+        <section class="cta-section" id="location">
+            <div class="container">
+                <div class="cta-card">
+                    <div class="cta-glow"></div>
+                    <div class="cta-content">
+                        <span class="section-label anim-reveal">— VISIT US TODAY</span>
+                        <h2 class="cta-heading anim-reveal">
+                            Kshatriya<br><em>Restaurant 2</em>
+                        </h2>
+                        <h3 class="cta-sub anim-reveal">WE ARE WAITING FOR YOU.</h3>
+                        <a href="https://maps.app.goo.gl/hr7RNnLmntbYCXi8A" target="_blank"
+                            class="btn-cta magnetic anim-reveal">
+                            <span>Get Directions Now</span>
+                            <i class="fas fa-location-arrow"></i>
+                            <div class="btn-shimmer"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label anim-reveal">— GET IN TOUCH</span>
+                    <h2 class="section-heading-center anim-reveal">Contact <em>Us</em></h2>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-card glass-card anim-reveal">
+                        <div class="contact-icon-wrap">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h4>Call Us</h4>
+                        <p><a href="tel:+918790189498">+91 8790189498</a></p>
+                    </div>
+                    <div class="contact-card glass-card anim-reveal">
+                        <div class="contact-icon-wrap">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Location</h4>
+                        <p>66H9+HR8, NH 16,<br>Dharmavaram, AP 533430</p>
+                    </div>
+                    <div class="contact-card glass-card anim-reveal">
+                        <div class="contact-icon-wrap">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>Hours</h4>
+                        <p>Open Daily<br>11:00 AM - 11:30 PM</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-top">
+                    <a href="#" class="logo royal-logo" aria-label="Kshatriya Restaurant 2 Home">
+                        <div class="logo-emblem">
+                            <div class="crown-halo"></div>
+                            <i class="fas fa-crown logo-crown"></i>
+                        </div>
+                        <div class="logo-content">
+                            <div class="logo-title-row">
+                                <span class="logo-name">KSHATRIYA</span>
+                                <span class="logo-tag-num">2</span>
+                            </div>
+                            <span class="logo-subtitle">ROYAL HERITAGE · NH 16</span>
+                        </div>
+                    </a>
+                    <div class="footer-links">
+                        <a href="#home">Home</a>
+                        <a href="#story">Story</a>
+                        <a href="#menu">Menu</a>
+                        <a href="#gallery">Gallery</a>
+                        <a href="#reviews">Reviews</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-divider"></div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Kshatriya Restaurant 2. All rights reserved.</p>
+                    <p class="footer-credit">Crafted with <i class="fas fa-heart"></i> in Dharmavaram</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
