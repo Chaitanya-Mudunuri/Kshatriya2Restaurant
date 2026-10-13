@@ -16,16 +16,22 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 
     <!-- Canonical URL -->
-        <!-- Favicon (Displays in Google Search Results) -->
-    <link rel="icon" type="image/jpeg" href="https://kshatriya.mudunuri.co.in/restaurant_profile.jpg">
-    <link rel="apple-touch-icon" href="https://kshatriya.mudunuri.co.in/restaurant_profile.jpg">
+        <!-- Favicon & Search Logo (Displays in Google Search Results & Browser Tabs) -->
+    <link rel="icon" type="image/x-icon" href="https://kshatriya.mudunuri.co.in/favicon.ico">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://kshatriya.mudunuri.co.in/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://kshatriya.mudunuri.co.in/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://kshatriya.mudunuri.co.in/apple-touch-icon.png">
+    <link rel="shortcut icon" href="https://kshatriya.mudunuri.co.in/favicon.ico">
 
     <link rel="canonical" href="https://kshatriya.mudunuri.co.in/">
 
     <!-- Open Graph (WhatsApp, Facebook & Social Previews) -->
     <meta property="og:type" content="restaurant">
     <meta property="og:url" content="https://kshatriya.mudunuri.co.in/">
+    <!-- Google Search Site Name Definition -->
     <meta property="og:site_name" content="Kshatriya Restaurant 2">
+    <meta name="application-name" content="Kshatriya Restaurant 2">
+    <meta name="apple-mobile-web-app-title" content="Kshatriya Restaurant 2">
     <meta property="og:title" content="Kshatriya Restaurant 2 — Royal Heritage Dining on NH 16">
     <meta property="og:description" content="Home of the legendary Rajula Chitti Muthyala Biryani in Dharmavaram, AP. Explore our signature dishes and royal heritage ambience.">
     <meta property="og:image" content="https://kshatriya.mudunuri.co.in/restaurant_front.jpg">
@@ -40,15 +46,30 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Restaurant",
-      "@id": "https://kshatriya.mudunuri.co.in/#restaurant",
-      "name": "Kshatriya Restaurant 2",
-      "image": [
-        "https://kshatriya.mudunuri.co.in/restaurant_front.jpg",
-        "https://kshatriya.mudunuri.co.in/dining_hall.jpg",
-        "https://kshatriya.mudunuri.co.in/biryani_brown.jpg"
-      ],
-      "url": "https://kshatriya.mudunuri.co.in/",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://kshatriya.mudunuri.co.in/#website",
+          "name": "Kshatriya Restaurant 2",
+          "alternateName": [
+            "Kshatriya 2",
+            "Kshatriya Restaurant 2 Dharmavaram",
+            "Kshatriya Restaurant NH 16"
+          ],
+          "url": "https://kshatriya.mudunuri.co.in/"
+        },
+        {
+          "@type": "Restaurant",
+          "@id": "https://kshatriya.mudunuri.co.in/#restaurant",
+          "name": "Kshatriya Restaurant 2",
+          "image": [
+            "https://kshatriya.mudunuri.co.in/logo.jpg",
+            "https://kshatriya.mudunuri.co.in/restaurant_front.jpg",
+            "https://kshatriya.mudunuri.co.in/dining_hall.jpg",
+            "https://kshatriya.mudunuri.co.in/biryani_brown.jpg"
+          ],
+          "logo": "https://kshatriya.mudunuri.co.in/logo.jpg",
+          "url": "https://kshatriya.mudunuri.co.in/",
       "telephone": "+918790189498",
       "priceRange": "₹₹",
       "servesCuisine": ["Andhra", "South Indian", "Biryani"],
@@ -81,6 +102,8 @@
       ],
       "hasMenu": "https://menu.kshatriya.mudunuri.co.in/",
       "menu": "https://menu.kshatriya.mudunuri.co.in/"
+        }
+      ]
     }
     </script>
 
